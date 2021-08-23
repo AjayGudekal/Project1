@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Details</title>
+</head>
+<body>
+<center>
+	<caption><b><h2>Employee Details </b></h2></caption>
+	<table border="2">
+		<thead>
+			<th>Empno</th>
+			<th>Empname</th>
+			<th>Empjob</th>
+			<th>Empsal</th>
+
+
+		</thead>
+
+		{% for i in empdb %}
+		<tr>
+			<td>{{i.empno}}</td>
+			<td>{{i.ename}}</td>
+			<td>{{i.ejob}}</td>
+			<td>{{i.esal}}</td>
+
+
+        </tr>
+		{% endfor %}
+
+	</table>
+</center>
+</body>
+</html>

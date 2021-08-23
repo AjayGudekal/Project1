@@ -1,0 +1,18 @@
+{% extends 'base.html' %} <!-- To load static elements  -->
+{% load crispy_forms_tags %}
+{% block  title %}
+<title>Post a blog</title>
+{% endblock %}
+
+{% block  content %}
+
+<center>
+    <form action="" method="post" role="form">
+        {% csrf_token %}
+<!--        {{form.as_p}}-->
+        {{form | crispy}}
+        <button type="submit"> Publish Your Blog </button>
+    </form>
+</center>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  {% include 'bootstrap/head.html' %}
+
+  <body>
+    {% include 'bootstrap/header.html' %}
+    {% include 'bootstrap/navbar.html' %}
+    {% include 'bootstrap/jumbotron.html' %}
+    {% include 'bootstrap/extra.html' %}
+
+    {% block content %}   {% endblock %}
+    {% block title %}   {% endblock %}
+
+
+    {% include 'bootstrap/sidebar.html' %}
+    {% include 'bootstrap/footer.html' %}
+  </body>
+</html>

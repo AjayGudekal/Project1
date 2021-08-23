@@ -1,0 +1,25 @@
+</head>
+<body bgcolor="lightgreen">
+<center>
+  <caption>Blog Table from Database</caption>
+<table border="2">
+	<thead>
+		<th>Title</th>
+		<th>Content</th>
+		<th>Author</th>
+		<th>Created_date</th>
+	</thead>
+
+	{% for i in blogdb %}
+	<tr>
+       <td>{{i.title}}</td>
+       <td>{{i.text}}</td>
+       <td>{{i.author | capfirst}}</td>
+       <td>{{i.created_date | date:"d/m/Y"}}</td>
+
+	</tr>
+	{% endfor %}
+</table>
+  </center>
+</body>
+</html>

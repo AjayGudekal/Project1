@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>products page</title>
+</head>
+<body bgcolor="lightblue">
+<center>
+  <table border="2" height="100" width="500">
+    <caption> <h3> Books Mela</h3></caption>
+    <thead>
+
+    <th> Pid</th>
+    <th> Product Name</th>
+    <th> Price</th>
+    <th> Author</th>
+    <th> Discount</th>
+
+    </thead>
+    {% for i in proddb %}
+    <tr>
+      <td>{{i.pid}}</td>
+      <td>{{i.pname | capfirst | cut:" "}}</td>
+      <td>{{i.price| add:"100"}}</td>
+      <td>{{i.author}}</td>
+
+      {% if i.price > 500 %}
+      <td> 15% Discount</td>
+      {% elif i.price > 400 %}
+      <td> 10% Discount</td>
+      {% else %}
+      <td> 5% Discount</td>
+      {% endif %}
+
+    </tr>
+    {% endfor %}
+  </table>
+</center>
+</body>
+</html>
